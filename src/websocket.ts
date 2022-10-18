@@ -13,7 +13,10 @@ interface Message {
   username: string;
 }
 
+// array of all users
 const users: RoomUser[] = [];
+
+// array with all messages from all rooms
 const messages: Message[] = [];
 
 io.on('connection', socket => {
