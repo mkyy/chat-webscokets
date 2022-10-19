@@ -39,8 +39,6 @@ document.getElementById('message_input').addEventListener('keypress', e => {
 });
 
 socket.on('message', snapshot => {
-  console.log(snapshot);
-
   createMsg(snapshot);
 });
 
@@ -50,8 +48,8 @@ function createMsg(msgData) {
   const newMsg = document.createElement('div');
   newMsg.className = 'new_message';
   newMsg.innerHTML = `
-  <p id='text'>${msgData.text}</p>
-  <p id='username'>${msgData.username} | ${msgData.createdAt}</p>
+  <p id='text'>${msgData.textmessage}</p>
+  <p id='username'>${msgData.username} | ${msgData.createdat}</p>
   `;
 
   messageDiv.appendChild(newMsg);
